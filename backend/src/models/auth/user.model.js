@@ -36,10 +36,10 @@ const userSchema = new Schema(
 		refreshToken: {
 			type: String,
 		},
-		isEmailVerified: {
-			required: true,
-			default: false,
-		},
+		// isEmailVerified: {
+		// 	required: true,
+		// 	default: false,
+		// },
 		forgotPasswordToken: {
 			type: String,
 		},

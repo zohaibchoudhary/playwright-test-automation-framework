@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { USERS_COUNT } from "./_constants.js";
 import { AvailableUserRoles } from "../constants.js";
-import { getRandomNumber } from "../utils/helpers.js";
+import { getRandomNumber, removeLocalFile } from "../utils/helpers.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { User } from "../models/auth/user.model.js";
 import fs from "fs";
@@ -30,7 +30,8 @@ const seedUsers = asyncHandler(async (req, res, next) => {
 
   await User.deleteMany({});
 
-  // add remove local file logic
+  // remove credential.json file
+  removeLocalFile("./public/temp/seed-credentials.json")
 
   const credentials = [];
 
