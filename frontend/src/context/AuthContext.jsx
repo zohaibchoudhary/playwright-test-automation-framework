@@ -45,7 +45,7 @@ const AuthProvider = ({ children }) => {
         LocalStorage.set("token", data.accessToken);
         navigate("/chat")
 			},
-			alert
+			// alert
 		);
 	};
 
@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
         LocalStorage.clear()
         navigate("/login")
       },
-      alert
+      // alert
     )
   }
 
