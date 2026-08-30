@@ -1,4 +1,4 @@
-export const DB_NAME="freeapi-chatapp"
+export const DB_NAME="advance-chatapp"
 
 export const UserRolesEnum = {
   ADMIN: "ADMIN",
