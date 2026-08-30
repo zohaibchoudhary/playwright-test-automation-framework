@@ -8,13 +8,13 @@ const userSchema = new Schema(
 	{
 		username: {
 			type: String,
-			// required: true,
+			required: true,
 			lowercase: true,
 			trim: true,
 		},
 		email: {
 			type: String,
-			// required: true,
+			required: true,
 			unique: true,
 			lowercase: true,
 			trim: true,
@@ -23,7 +23,7 @@ const userSchema = new Schema(
 			type: String,
 			enum: AvailableUserRoles,
 			default: UserRolesEnum.USER,
-			// required: true,
+			required: true
 		},
 		avatar: {
       type: String,
@@ -31,15 +31,15 @@ const userSchema = new Schema(
     },
 		password: {
 			type: String,
-			// required: [true, "Password is required"],
+			required: [true, "Password is required"],
 		},
 		refreshToken: {
 			type: String,
 		},
-		// isEmailVerified: {
-		// 	required: true,
-		// 	default: false,
-		// },
+		isEmailVerified: {
+			type: Boolean,
+			default: false,
+		},
 		forgotPasswordToken: {
 			type: String,
 		},
